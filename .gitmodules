@@ -1,3 +1,6 @@
 [submodule ".local/share/nvim/site/pack/vigou/start/dracula"]
 	path = .local/share/nvim/site/pack/vigou/start/dracula
 	url = https://github.com/dracula/vim.git
+[submodule ".local/share/nvim/site/pack/vigou/opt/vim-css-color"]
+	path = .local/share/nvim/site/pack/vigou/opt/vim-css-color
+	url = https://github.com/ap/vim-css-color.git
