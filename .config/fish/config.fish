@@ -9,6 +9,10 @@ function nvimfzf
     nvim +"Files! $argv[1]"
 end
 
+function tig
+    nvim +G +only
+end
+
 abbr vi nvim
 abbr py python3.7
 abbr nf nvimfzf
