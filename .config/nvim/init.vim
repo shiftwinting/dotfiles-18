@@ -1,45 +1,45 @@
 " Plugin manager
 let g:python_host_prog='/usr/local/bin/python'
-let g:python3_host_prog='/bin/python3.6'
+let g:python3_host_prog='/usr/local/bin/python3.7'
 
-packadd minpac
-
-" Plugins {{{
-call minpac#init({'dir' : stdpath('data') . '/site'})
-
-" Aspect {{{
-call minpac#add('dracula/vim', {'name' : 'dracula'})
-call minpac#add('ap/vim-css-color')
-" }}}
-
-" Completions/lang/snippets {{{
-call minpac#add('autozimu/LanguageClient-neovim', {'branch': 'next', 'do': {-> system('bash install.sh')}})
-call minpac#add('Shougo/deoplete.nvim', {'do': {-> execute('UpdateRemotePlugins')}})
-call minpac#add('Shougo/neosnippet.vim', { 'branch': 'master' })
-call minpac#add('Shougo/neosnippet-snippets')
-" }}}
-
-" Easy editting {{{
-call minpac#add('tpope/vim-unimpaired')
-call minpac#add('tpope/vim-surround')
-call minpac#add('tpope/vim-commentary')
-call minpac#add('junegunn/vim-easy-align')
-call minpac#add('jiangmiao/auto-pairs')
-call minpac#add('kkoomen/vim-doge')
-"}}}
-
-" Enhanced features {{{
-" Plug 'junegunn/vim-peekaboo'
-call minpac#add('mbbill/undotree')
-call minpac#add('wellle/targets.vim')
-" }}}
-
-call minpac#add('JamshedVesuna/vim-markdown-preview')
-call minpac#add('junegunn/vader.vim')
-call minpac#add('tpope/vim-dispatch')
-call minpac#add('vigoux/LanguageTool.nvim')
-
-call minpac#add('udalov/kotlin-vim')
+" packadd minpac
+" 
+" " Plugins {{{
+" call minpac#init({'dir' : stdpath('data') . '/site'})
+" 
+" " Aspect {{{
+" call minpac#add('dracula/vim', {'name' : 'dracula'})
+" call minpac#add('ap/vim-css-color')
+" " }}}
+" 
+" " Completions/lang/snippets {{{
+" call minpac#add('autozimu/LanguageClient-neovim', {'branch': 'next', 'do': {-> system('bash install.sh')}})
+" call minpac#add('Shougo/deoplete.nvim', {'do': {-> execute('UpdateRemotePlugins')}})
+" call minpac#add('Shougo/neosnippet.vim', { 'branch': 'master' })
+" call minpac#add('Shougo/neosnippet-snippets')
+" " }}}
+" 
+" " Easy editting {{{
+" call minpac#add('tpope/vim-unimpaired')
+" call minpac#add('tpope/vim-surround')
+" call minpac#add('tpope/vim-commentary')
+" call minpac#add('junegunn/vim-easy-align')
+" call minpac#add('jiangmiao/auto-pairs')
+" call minpac#add('kkoomen/vim-doge')
+" "}}}
+" 
+" " Enhanced features {{{
+" " Plug 'junegunn/vim-peekaboo'
+" call minpac#add('mbbill/undotree')
+" call minpac#add('wellle/targets.vim')
+" " }}}
+" 
+" call minpac#add('JamshedVesuna/vim-markdown-preview')
+" call minpac#add('junegunn/vader.vim')
+" call minpac#add('tpope/vim-dispatch')
+" call minpac#add('vigoux/LanguageTool.nvim')
+" 
+" call minpac#add('udalov/kotlin-vim')
 
 
 " Multi-entry selection UI {{{
@@ -50,16 +50,16 @@ if (OS == "Darwin")
 elseif ( OS == 'Linux' )
     source /usr/share/vim/vimfiles/plugin/fzf.vim
 endif
-call minpac#add('junegunn/fzf.vim')
+" call minpac#add('junegunn/fzf.vim')
 " }}}
 
 " Git support {{{
-call minpac#add('tpope/vim-fugitive')
-call minpac#add('airblade/vim-gitgutter')
+" call minpac#add('tpope/vim-fugitive')
+" call minpac#add('airblade/vim-gitgutter')
 " }}}
 
 " Filetypes {{{
-call minpac#add('cespare/vim-toml')
+" call minpac#add('cespare/vim-toml')
 " }}}
 
 " }}}

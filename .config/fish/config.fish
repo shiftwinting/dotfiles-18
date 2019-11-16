@@ -3,7 +3,7 @@ set -x FZF_DEFAULT_OPTS "--preview=\"bat --color=always --style numbers,grid,cha
 set -x FZF_DEFAULT_COMMAND "fd --color=never"
 set -x MANPAGER "nvim -c 'set ft=man' -c 'set laststatus=0' -c 'set noruler' -"
 
-set -x PATH $PATH $HOME/.luarocks/bin
+set -x PATH $PATH $HOME/.luarocks/bin $HOME/.cargo/env
 
 function nvimfzf
     nvim +"Files! $argv[1]"
