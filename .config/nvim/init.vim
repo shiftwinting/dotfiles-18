@@ -86,7 +86,7 @@ set updatetime=500
 
 set inccommand=nosplit                                 " preview des recherches © Ensimag bb
 set completeopt=preview,menuone,noinsert                           " j'ai pas encore tout compris
-set list listchars=tab:>-,trail:•,nbsp:!,conceal::     " Afficher les caractères moches
+set list listchars=tab:\|\ ,trail:•,nbsp:!,conceal::     " Afficher les caractères moches
 set tags=.tags;/                                       " Chercher les tags dans les dossiers superieurs
 set undofile                                           " Undo persistants
 set grepprg="rg --vimgrep"                             " plus vite que grep
@@ -102,7 +102,7 @@ let g:netrw_list_hide = netrw_gitignore#Hide() . ',\(^\|\s\s\)\zs\.\S\+'
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+set noexpandtab
 
 
 " Leader
