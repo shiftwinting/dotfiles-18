@@ -80,11 +80,11 @@ set textwidth=125
 set colorcolumn=+0
 set signcolumn=yes                                     " Pour eviter que ça clignotte à gauche
 set scrolloff=5
-set winblend=10 " Des fenetres flottantes transparantes, tro stylé
+set winblend=10 " Des fenetres flottantes transparentes, tro stylé
 set updatetime=500
 
 set inccommand=nosplit                                 " preview des recherches © Ensimag bb
-set completeopt=preview,menu,noinsert                           " j'ai pas encore tout compris
+set completeopt=preview,menuone,noinsert                           " j'ai pas encore tout compris
 set list listchars=tab:>-,trail:•,nbsp:!,conceal::     " Afficher les caractères moches
 set tags=.tags;/                                       " Chercher les tags dans les dossiers superieurs
 set undofile                                           " Undo persistants
