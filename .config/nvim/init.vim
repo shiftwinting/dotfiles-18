@@ -1,3 +1,4 @@
+" Last Change: 2019 Nov 04
 " Plugin manager
 let g:python_host_prog='/usr/local/bin/python'
 let g:python3_host_prog='/bin/python3.6'
@@ -8,8 +9,8 @@ packadd minpac
 call minpac#init({'dir' : stdpath('data') . '/site'})
 
 " Aspect {{{
-call minpac#add('dracula/vim', {'name' : 'dracula'})
-call minpac#add('ap/vim-css-color')
+" call minpac#add('dracula/vim', {'name' : 'dracula'})
+" call minpac#add('ap/vim-css-color')
 " }}}
 
 " Completions/lang/snippets {{{

@@ -1,4 +1,4 @@
-" Last Change: 2019 Nov 04
+" Last Change: 2019 Nov 11
 if !exists(':LanguageClientStart')
     finish
 endif
@@ -18,7 +18,7 @@ let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.l
 
 let g:LanguageClient_serverCommands = {
     \ 'python': ["pyls"],
-    \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
     \ 'c': ["ccls"],
     \ 'groovy' : ["java", "-jar", "/Users/Thomas/Perso/groovy-language-server/build/libs/groovy-language-server.jar"],
     \ 'kotlin' : ['/Users/Thomas/Perso/kotlin-language-server/server/build/install/server/bin/kotlin-language-server'],

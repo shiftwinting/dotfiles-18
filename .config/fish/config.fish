@@ -1,9 +1,9 @@
 set -x EDITOR nvim
 set -x FZF_DEFAULT_OPTS "--preview=\"bat --color=always --style numbers,grid,changes {}\""
 set -x FZF_DEFAULT_COMMAND "fd --color=never"
-set -x MANPAGER "nvim -c 'set ft=man' -c 'set laststatus=0' -c 'set noruler' -"
+set -x MANPAGER "nvim +\"set ft=man\" -" # | set laststatus=0 | set noruler
 
-set -x PATH $PATH $HOME/.luarocks/bin
+set -x PATH $PATH $HOME/.luarocks/bin /opt/texlive/2019/bin/x86_64-linux
 
 function nvimfzf
     nvim +"Files! $argv[1]"
@@ -46,5 +46,8 @@ set fish_cursor_default     block      blink
 set fish_cursor_insert      line       blink
 set fish_cursor_replace_one underscore blink
 set fish_cursor_visual      block
+
+set -x LPASS_ASKPASS dmenu_askpass
+set -x LPASS_PINENTRY dmenu_askpass
 
 # source ~/.iterm2_shell_integration.(basename $SHELL)
