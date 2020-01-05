@@ -1,4 +1,4 @@
-" Last Change: 2019 Nov 11
+" Last Change: 2020 janv. 05
 if !exists(':LanguageClientStart')
     finish
 endif
@@ -16,14 +16,14 @@ let g:LanguageClient_serverStderr = expand('~/.local/share/nvim/LanguageServer.l
 " let g:deoplete#omni#input_patterns = {}
 " let g:deoplete#omni#input_patterns.java = '[^. *\t]\.\w*'
 
-let g:LanguageClient_serverCommands = {
-    \ 'python': ["pyls"],
-    \ 'rust': ['rustup', 'run', 'nightly', 'rls'],
-    \ 'c': ["ccls"],
-    \ 'groovy' : ["java", "-jar", "/Users/Thomas/Perso/groovy-language-server/build/libs/groovy-language-server.jar"],
-    \ 'kotlin' : ['/Users/Thomas/Perso/kotlin-language-server/server/build/install/server/bin/kotlin-language-server'],
-    \ 'lua' : ['lua-lsp']
-    \ }
+" let g:LanguageClient_serverCommands = {
+"     \ 'python': ["pyls"],
+"     \ 'rust': ['rustup', 'run', 'stable', 'rls'],
+"     \ 'c': ["ccls"],
+"     \ 'groovy' : ["java", "-jar", "/Users/Thomas/Perso/groovy-language-server/build/libs/groovy-language-server.jar"],
+"     \ 'kotlin' : ['/Users/Thomas/Perso/kotlin-language-server/server/build/install/server/bin/kotlin-language-server'],
+"     \ 'lua' : ['lua-lsp']
+"     \ }
 
 " LanguageClient highlights
 let g:LanguageClient_diagnosticsDisplay =

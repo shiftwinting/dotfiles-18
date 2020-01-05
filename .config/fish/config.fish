@@ -9,6 +9,10 @@ function nvimfzf
     nvim +"Files! $argv[1]"
 end
 
+function tig
+    nvim +G +only
+end
+
 abbr vi nvim
 abbr py python3.7
 abbr nf nvimfzf
@@ -51,3 +55,4 @@ set -x LPASS_ASKPASS dmenu_askpass
 set -x LPASS_PINENTRY dmenu_askpass
 
 # source ~/.iterm2_shell_integration.(basename $SHELL)
+source ~/.cargo/env
