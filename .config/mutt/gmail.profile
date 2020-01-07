@@ -23,5 +23,5 @@
 
 # # Mailboxes
 # mailboxes imaps://imap.gmail.com:993/INBOX
-set sendmail="msmtp -a gmail"
+set sendmail="$HOME/.config/mutt/sendmail.sh gmail"
 set from="tomvig38@gmail.com"

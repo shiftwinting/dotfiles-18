@@ -5,7 +5,7 @@ set realname="Thomas Vigouroux"
 set mail_check=90
 set header_cache = "~/.config/mutt/header_cache/"
 
-set debug_level = 3
+set debug_level = 5
 set debug_file = neolog
 
 macro index,pager <F1> ":source ~/.config/mutt/gmail.profile<enter>"
@@ -22,6 +22,9 @@ virtual-mailboxes \
     "Sent"      "notmuch://?query=tag:sent"
 
 bind index,pager \' modify-labels-then-hide
+bind pager j next-line
+bind pager k previous-line
+
 macro index,pager M "<modify-labels-then-hide>-inbox "
 macro index,pager A "<modify-labels>-inbox -unread<enter>"
 macro index,pager S "<modify-labels>+spam +junk -inbox -unread<enter>"
@@ -29,6 +32,7 @@ macro index,pager c "<change-vfolder>?"
 macro index \\ "<vfolder-from-query>"
 macro index - "<modify-labels>-"
 macro index + "<modify-labels>+"
+
 set nm_query_type = threads
 set sort=threads
 
@@ -37,10 +41,19 @@ bind index gg first-entry
 bind index G last-entry
 set read_inc=1000
 
-reply-hook '~C tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
+# reply-hook '~C tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
 send-hook '~f tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
 
-reply-hook '~C thomas\.vigouroux@grenoble-inp\.org' 'source ~/.config/mutt/ginp.profile'
+# reply-hook '~C thomas\.vigouroux@grenoble-inp\.org' 'source ~/.config/mutt/ginp.profile'
 send-hook '~f thomas\.vigouroux@grenoble-inp\.org' 'source ~/.config/mutt/ginp.profile'
 
-set reverse_name = yes
+# reply-hook '~C thomas\.vigouroux@croix-rouge\.fr' 'source ~/.config/mutt/croix-rouge.profile'
+send-hook '~f thomas\.vigouroux@croix-rouge\.fr' 'source ~/.config/mutt/croix-rouge.profile'
+
+macro index,pager <F1> ":source ~/.config/mutt/gmail.profile<enter>"
+macro index,pager <F2> ":source ~/.config/mutt/ginp.profile<enter>"
+macro index,pager <F3> ":source ~/.config/mutt/croix-rouge.profile<enter>"
+
+alternates "thomas\.vigouroux@grenoble-inp\.org" "thomas\.vigouroux@croix-rouge\.fr" "tomvig38@gmail\.com"
+
+# set reverse_name = yes

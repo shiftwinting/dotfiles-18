@@ -24,4 +24,4 @@
 # # Mailboxes
 # mailboxes imaps://imap.partage.renater.fr:993/INBOX
 set from="thomas.vigouroux@grenoble-inp.org"
-set sendmail="msmtp -a ginp"
+set sendmail="$HOME/.config/mutt/sendmail.sh ginp"

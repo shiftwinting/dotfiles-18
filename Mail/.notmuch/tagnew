@@ -1,5 +1,9 @@
 # Tag croix rouge
-+croix-rouge -- from:*@croix-rouge.fr and tag:unread
++croix-rouge -- from:*@croix-rouge.fr and tag:unread or from:heleneazincourt@gmail.com
 
 # Tag ensimag
 +ensimag -- from:*@grenoble-inp.fr and tag:unread
+-unread -inbox +ensimag +junk +spam -- no-reply@jobteaser.com
+
+# Tag musique
++musique -- from:isabelle.thiault@wanadoo.fr

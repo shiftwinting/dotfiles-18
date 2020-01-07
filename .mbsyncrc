@@ -8,7 +8,7 @@ IMAPAccount gmail
 Host imap.gmail.com
 User tomvig38@gmail.com
 Port 993
-PassCmd "lpass show -p Mutt"
+PassCmd "+lpass show -p Mutt"
 SSLType IMAPS
 AuthMechs LOGIN
 
@@ -43,7 +43,7 @@ IMAPAccount ginp
 Host imap.partage.renater.fr
 User thomas.vigouroux@grenoble-inp.org
 Port 993
-PassCmd "lpass show -p GInp"
+PassCmd "+lpass show -p GInp"
 SSLType IMAPS
 AuthMechs *
 
@@ -71,3 +71,38 @@ Group ginp
 Channel ginp-inbox
 Channel ginp-sent
 Channel ginp-trash
+
+# Croix-rouge account
+
+IMAPAccount croix-rouge
+Host webmail.croix-rouge.fr
+User "intranet\\vigourouxt"
+Port 993
+PassCmd "+lpass show -p croix-rouge.fr"
+SSLType IMAPS
+AuthMechs LOGIN
+
+MaildirStore croix-rouge-local
+Path ~/Mail/croix-rouge/
+Inbox ~/Mail/croix-rouge/INBOX
+
+IMAPStore croix-rouge-remote
+Account croix-rouge
+
+Channel croix-rouge-inbox
+Master :croix-rouge-remote:
+Slave :croix-rouge-local:
+Patterns "INBOX"
+
+Channel croix-rouge-sent
+Master :croix-rouge-remote:"&AMk-l&AOk-ments envoy&AOk-s"
+Slave :croix-rouge-local:sent
+
+Channel croix-rouge-trash
+Master :croix-rouge-remote:"&AMk-l&AOk-ments supprim&AOk-s"
+Slave :croix-rouge-local:trash
+
+Group croix-rouge
+Channel croix-rouge-inbox
+Channel croix-rouge-sent
+Channel croix-rouge-trash
