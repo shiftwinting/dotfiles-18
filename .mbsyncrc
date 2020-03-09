@@ -8,7 +8,7 @@ IMAPAccount gmail
 Host imap.gmail.com
 User tomvig38@gmail.com
 Port 993
-PassCmd "+lpass show -p Mutt"
+PassCmd "+/usr/local/bin/lpass show -p Mutt"
 SSLType IMAPS
 AuthMechs LOGIN
 
@@ -43,7 +43,7 @@ IMAPAccount ginp
 Host imap.partage.renater.fr
 User thomas.vigouroux@grenoble-inp.org
 Port 993
-PassCmd "+lpass show -p GInp"
+PassCmd "+/usr/local/bin/lpass show -p GInp"
 SSLType IMAPS
 AuthMechs *
 
@@ -78,7 +78,7 @@ IMAPAccount croix-rouge
 Host webmail.croix-rouge.fr
 User "intranet\\vigourouxt"
 Port 993
-PassCmd "+lpass show -p croix-rouge.fr"
+PassCmd "+/usr/local/bin/lpass show -p croix-rouge.fr"
 SSLType IMAPS
 AuthMechs LOGIN
 

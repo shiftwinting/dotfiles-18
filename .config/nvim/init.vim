@@ -1,7 +1,7 @@
-" Last Change: 2020 janv. 05
+" Last Change: 2020 mar 06
 " Plugin manager
 let g:python_host_prog='/bin/python'
-let g:python3_host_prog = '/bin/python3'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " packadd minpac
 " 
@@ -83,10 +83,11 @@ set signcolumn=yes                                     " Pour eviter que ça cli
 set scrolloff=5
 set winblend=10 " Des fenetres flottantes transparentes, tro stylé
 set updatetime=500
+set nowrap
 
 set inccommand=nosplit                                 " preview des recherches © Ensimag bb
 set completeopt=preview,menuone,noinsert                           " j'ai pas encore tout compris
-set list listchars=tab:\|\ ,trail:•,nbsp:!,conceal::     " Afficher les caractères moches
+set list listchars=tab:\|-,trail:•,nbsp:!,conceal::     " Afficher les caractères moches
 set tags=.tags;/                                       " Chercher les tags dans les dossiers superieurs
 set undofile                                           " Undo persistants
 set grepprg="rg --vimgrep"                             " plus vite que grep
@@ -108,8 +109,7 @@ set noexpandtab
 " Leader
 let mapleader = "\<Space>"
 
-" LocalLeader <-- A VOIR
-let g:deoplete#enable_at_startup = 1
+let g:mucomplete#enable_auto_at_startup = 1
 
 " }}}
 

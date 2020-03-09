@@ -51,8 +51,8 @@ set fish_cursor_insert      line       blink
 set fish_cursor_replace_one underscore blink
 set fish_cursor_visual      block
 
-set -x LPASS_ASKPASS dmenu_askpass
-set -x LPASS_PINENTRY dmenu_askpass
+# set -x LPASS_ASKPASS ssh_askpass
+# set -x LPASS_PINENTRY ssh_askpass
 
 # source ~/.iterm2_shell_integration.(basename $SHELL)
 source ~/.cargo/env

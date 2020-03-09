@@ -8,10 +8,7 @@ set header_cache = "~/.config/mutt/header_cache/"
 set debug_level = 5
 set debug_file = neolog
 
-macro index,pager <F1> ":source ~/.config/mutt/gmail.profile<enter>"
-macro index,pager <F2> ":source ~/.config/mutt/ginp.profile<enter>"
-
-source gmail.profile
+source ginp.profile
 
 set index_format = "%4C %Z %{%b %d} %-20.20L (%?l?%4l&%4c?) %.100s %*  %J"
 
@@ -24,6 +21,7 @@ virtual-mailboxes \
 bind index,pager \' modify-labels-then-hide
 bind pager j next-line
 bind pager k previous-line
+bind index,pager C compose-to-sender
 
 macro index,pager M "<modify-labels-then-hide>-inbox "
 macro index,pager A "<modify-labels>-inbox -unread<enter>"
@@ -40,6 +38,10 @@ bind index g noop
 bind index gg first-entry
 bind index G last-entry
 set read_inc=1000
+set query_command="~/.config/mutt/addr_query.sh"
+set query_format="%4c %t %-45.45a %-25.25n %?e?(%e)?"
+set record="~/Mail/sent"
+set postponed="~/Mail/postponed"
 
 # reply-hook '~C tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
 send-hook '~f tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
@@ -56,4 +58,8 @@ macro index,pager <F3> ":source ~/.config/mutt/croix-rouge.profile<enter>"
 
 alternates "thomas\.vigouroux@grenoble-inp\.org" "thomas\.vigouroux@croix-rouge\.fr" "tomvig38@gmail\.com"
 
-# set reverse_name = yes
+set reverse_name = yes
+subscribe ^ports@openbsd\\.org$ .*@riot-os.org
+
+auto_view text/html text/plain application/pdf
+alternative_order text/html text/enriched text/plain
