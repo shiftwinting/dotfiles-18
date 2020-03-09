@@ -10,6 +10,6 @@
 [submodule ".local/share/nvim/site/pack/vigou/start/msmtp"]
 	path = .local/share/nvim/site/pack/vigou/start/msmtp
 	url = https://github.com/wogong/msmtp.vim
-[submodule ".local/share/nvim/site/pack/vigou/LanguageTool.nvim"]
-	path = .local/share/nvim/site/pack/vigou/LanguageTool.nvim
+[submodule ".local/share/nvim/site/pack/vigou/start/LanguageTool.nvim"]
+	path = .local/share/nvim/site/pack/vigou/start/LanguageTool.nvim
 	url = git@github.com:vigoux/LanguageTool.nvim.git
