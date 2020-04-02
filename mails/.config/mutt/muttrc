@@ -1,0 +1,65 @@
+set text_flowed
+source dracula.muttrc
+set realname="Thomas Vigouroux"
+
+set mail_check=90
+set header_cache = "~/.config/mutt/header_cache/"
+
+set debug_level = 5
+set debug_file = neolog
+
+source ginp.profile
+
+set index_format = "%4C %Z %{%b %d} %-20.20L (%?l?%4l&%4c?) %.100s %*  %J"
+
+set nm_default_uri = "notmuch://`notmuch config get database.path`"
+virtual-mailboxes \
+    "INBOX"     "notmuch://?query=tag:inbox"\
+    "Unread"    "notmuch://?query=tag:unread"\
+    "Sent"      "notmuch://?query=tag:sent"
+
+bind index,pager \' modify-labels-then-hide
+bind pager j next-line
+bind pager k previous-line
+bind index,pager C compose-to-sender
+
+macro index,pager M "<modify-labels-then-hide>-inbox "
+macro index,pager A "<modify-labels>-inbox -unread<enter>"
+macro index,pager S "<modify-labels>+spam +junk -inbox -unread<enter>"
+macro index,pager c "<change-vfolder>?"
+macro index \\ "<vfolder-from-query>"
+macro index - "<modify-labels>-"
+macro index + "<modify-labels>+"
+
+set nm_query_type = threads
+set sort=threads
+
+bind index g noop
+bind index gg first-entry
+bind index G last-entry
+set read_inc=1000
+set query_command="~/.config/mutt/addr_query.sh"
+set query_format="%4c %t %-45.45a %-25.25n %?e?(%e)?"
+set record="~/Mail/sent"
+set postponed="~/Mail/postponed"
+
+# reply-hook '~C tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
+send-hook '~f tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
+
+# reply-hook '~C thomas\.vigouroux@grenoble-inp\.org' 'source ~/.config/mutt/ginp.profile'
+send-hook '~f thomas\.vigouroux@grenoble-inp\.org' 'source ~/.config/mutt/ginp.profile'
+
+# reply-hook '~C thomas\.vigouroux@croix-rouge\.fr' 'source ~/.config/mutt/croix-rouge.profile'
+send-hook '~f thomas\.vigouroux@croix-rouge\.fr' 'source ~/.config/mutt/croix-rouge.profile'
+
+macro index,pager <F1> ":source ~/.config/mutt/gmail.profile<enter>"
+macro index,pager <F2> ":source ~/.config/mutt/ginp.profile<enter>"
+macro index,pager <F3> ":source ~/.config/mutt/croix-rouge.profile<enter>"
+
+alternates "thomas\.vigouroux@grenoble-inp\.org" "thomas\.vigouroux@croix-rouge\.fr" "tomvig38@gmail\.com"
+
+set reverse_name = yes
+subscribe ^ports@openbsd\\.org$ .*@riot-os.org
+
+auto_view text/html text/plain application/pdf
+alternative_order text/html text/enriched text/plain

@@ -1,18 +1,15 @@
-[submodule ".local/share/nvim/site/pack/vigou/start/dracula"]
-	path = .local/share/nvim/site/pack/vigou/start/dracula
-	url = https://github.com/dracula/vim.git
-[submodule ".local/share/nvim/site/pack/vigou/opt/vim-css-color"]
-	path = .local/share/nvim/site/pack/vigou/opt/vim-css-color
-	url = https://github.com/ap/vim-css-color.git
-[submodule ".local/share/nvim/site/pack/vigou/start/nvim-lsp"]
-	path = .local/share/nvim/site/pack/vigou/start/nvim-lsp
-	url = https://github.com/neovim/nvim-lsp.git
-[submodule ".local/share/nvim/site/pack/vigou/start/msmtp"]
-	path = .local/share/nvim/site/pack/vigou/start/msmtp
-	url = https://github.com/wogong/msmtp.vim
-[submodule ".local/share/nvim/site/pack/vigou/start/LanguageTool.nvim"]
-	path = .local/share/nvim/site/pack/vigou/start/LanguageTool.nvim
+[submodule "neovim/.local/share/nvim/site/pack/vigou/LanguageTool.nvim"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/LanguageTool.nvim
 	url = git@github.com:vigoux/LanguageTool.nvim.git
-[submodule ".local/share/nvim/site/pack/vigou/start/vim-mucomplete"]
-	path = .local/share/nvim/site/pack/vigou/start/vim-mucomplete
-	url = https://github.com/lifepillar/vim-mucomplete.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/vim
+	url = https://github.com/dracula/vim.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/nvim-lsp"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/nvim-lsp
+	url = https://github.com/neovim/nvim-lsp.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/completion-nvim"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/completion-nvim
+	url = https://github.com/haorenW1025/completion-nvim.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/fzf.vim"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
