@@ -16,3 +16,12 @@
 [submodule "neovim/.local/share/nvim/site/pack/vigou/start/completion-treesitter"]
 	path = neovim/.local/share/nvim/site/pack/vigou/start/completion-treesitter
 	url = git@github.com:vigoux/completion-treesitter.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/neosnippet.vim"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/neosnippet.vim
+	url = https://github.com/Shougo/neosnippet.vim.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/neosnippet-snippets"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/neosnippet-snippets
+	url = https://github.com/Shougo/neosnippet-snippets.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/auto-pairs"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
