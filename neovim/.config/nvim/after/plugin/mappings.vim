@@ -1,4 +1,4 @@
-" Last Change: 2020 fév 29
+" Last Change: 2020 avr 02
 vnoremap <silent> < <gv
 vnoremap <silent> > >gv
 
@@ -17,10 +17,6 @@ smap <expr><TAB>
 			\ pumvisible() ? "\<C-n>" :
 			\ neosnippet#expandable_or_jumpable() ?
 			\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-
-inoremap <silent> <expr> <CR>
-			\ mucomplete#neosnippet#expand_snippet("\<cr>")
 
 nnoremap ' `
 nnoremap ` '

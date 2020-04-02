@@ -1,4 +1,4 @@
-" Last Change: 2020 mar 09
+" Last Change: 2020 avr 02
 " Utility to store lsp/completion config
 " I use omnifunc with default mappings (like <C-X><C-O>) but with <Tab> and <S-Tab> to choose
 set omnifunc=v:lua.vim.lsp.omnifunc
@@ -9,8 +9,8 @@ set omnifunc=v:lua.vim.lsp.omnifunc
 lua << EOF
 vim.cmd('packadd nvim-lsp')
 nvim_lsp = require'nvim_lsp'
-nvim_lsp.ccls.setup{}
-nvim_lsp.rls.setup{}
+-- nvim_lsp.ccls.setup{}
+nvim_lsp.rls.setup{on_attach=require'completion'.on_attach}
 nvim_lsp.ghcide.setup{}
 EOF
 " }
