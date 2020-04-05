@@ -37,3 +37,9 @@
 [submodule "neovim/.local/share/nvim/site/pack/vigou/start/templar.nvim"]
 	path = neovim/.local/share/nvim/site/pack/vigou/start/templar.nvim
 	url = git@github.com:vigoux/templar.nvim.git
+[submodule "base/apps/st"]
+	path = base/apps/st
+	url = git@github.com:vigoux/st.git
+[submodule "base/apps/dmenu"]
+	path = base/apps/dmenu
+	url = git@github.com:vigoux/dmenu.git
