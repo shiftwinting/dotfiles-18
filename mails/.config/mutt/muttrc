@@ -22,8 +22,8 @@ bind pager k previous-line
 bind index,pager C compose-to-sender
 
 macro index,pager M "<modify-labels-then-hide>-inbox "
-macro index,pager A "<modify-labels>-inbox -unread<enter>"
-macro index,pager S "<modify-labels>+spam +junk -inbox -unread<enter>"
+macro index,pager A "<modify-labels>-inbox -unread -new<enter>"
+macro index,pager S "<modify-labels>+spam +junk -inbox -unread -new<enter>"
 macro index,pager c "<change-vfolder>?"
 macro index \\ "<vfolder-from-query>"
 macro index - "<modify-labels>-"
@@ -40,6 +40,7 @@ set query_command="~/.config/mutt/addr_query.sh"
 set query_format="%4c %t %-45.45a %-25.25n %?e?(%e)?"
 set record="~/Mail/sent"
 set postponed="~/Mail/postponed"
+set sig_on_top=yes
 
 # reply-hook '~C tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
 send-hook '~f tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
