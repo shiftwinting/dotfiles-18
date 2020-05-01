@@ -1,0 +1,3 @@
+#!/bin/sh
+
+lpass show -p 2852294259962106170 | sudo openconnect --authgroup="Etudiants de Grenoble INP" --user=$(lpass show -u 2852294259962106170) --passwd-on-stdin vpn.grenet.fr

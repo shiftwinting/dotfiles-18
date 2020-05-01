@@ -1,0 +1,24 @@
+#!/bin/bash
+
+export DISPLAY=:0
+export PATH=/usr/local/bin/:/bin/:$PATH
+export LPASS_ASKPASS=/home/thomas/scripts/askpass.sh
+export LPASS_PINENTRY=/home/thomas/scripts/askpass.sh
+
+if lpass status -q; then
+	mbsync -Va
+
+	# Some mails are no longer new
+	notmuch tag -new -- tag:new
+	notmuch new
+
+	notmuch search tag:new | sed "s/.*\] \(.*\); \(.*\) (.*)/\1 : \2/" | while read x; do
+		dunstify "New mail" "$x"
+	done
+else
+	ACTION=$(dunstify -A 'login,Log In' "Login needed" "You need to log in the LastPass to check mails")
+	if [ "$ACTION" == "login" ]; then
+		lpass login tomvig38@gmail.com 2>&1 > /home/thomas/test
+		/home/thomas/scripts/checkmail
+	fi
+fi

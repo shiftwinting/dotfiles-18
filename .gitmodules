@@ -43,3 +43,24 @@
 [submodule "base/apps/dmenu"]
 	path = base/apps/dmenu
 	url = git@github.com:vigoux/dmenu.git
+[submodule "base/apps/neovim"]
+	path = base/apps/neovim
+	url = https://github.com/neovim/neovim.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/editorconfig-vim"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/nvim-treesitter"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/nvim-treesitter
+	url = git@github.com:vigoux/nvim-treesitter.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vimwiki"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-fugitive"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/neoformat"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/neoformat
+	url = https://github.com/sbdchd/neoformat.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-javacomplete2"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-javacomplete2
+	url = https://github.com/artur-shaik/vim-javacomplete2.git

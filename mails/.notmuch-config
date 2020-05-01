@@ -12,7 +12,7 @@
 #
 
 [database]
-path=/Users/Thomas/Mail
+path=/home/thomas/Mail
 
 # User configuration
 #
@@ -51,7 +51,7 @@ other_email=thomas.vigouroux@grenoble-inp.org;
 #
 
 [new]
-tags=unread;inbox;
+tags=unread;inbox;new;
 ignore=
 
 # Search configuration

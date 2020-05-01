@@ -1,3 +1,4 @@
+let g:languagetool_server_command='languagetool --http'
 let g:languagetool_server='$HOME/LanguageTool/languagetool-server.jar'
 let g:languagetool = {
             \ '.' : {

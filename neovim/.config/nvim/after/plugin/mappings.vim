@@ -1,4 +1,4 @@
-" Last Change: 2020 avr 02
+" Last Change: 2020 avril 30
 vnoremap <silent> < <gv
 vnoremap <silent> > >gv
 
@@ -22,3 +22,6 @@ nnoremap ' `
 nnoremap ` '
 nnoremap j gj
 nnoremap k gk
+
+" Got from https://prettier.io/docs/en/vim.html
+nnoremap gp :silent %!prettier --stdin-filepath % --trailing-comma all --single-quote<CR>

@@ -46,4 +46,4 @@ nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <Leader>t :Tags<CR>
 nnoremap <silent> <Leader>c :Commits<CR>
 nnoremap <silent> <Leader>oc :FZF ~/.config/<CR>
-nnoremap <silent> q: :CHistory<CR>
+nnoremap <silent> <leader>q :CHistory<CR>

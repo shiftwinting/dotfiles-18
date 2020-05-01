@@ -1,12 +1,10 @@
 set text_flowed
 source dracula.muttrc
 set realname="Thomas Vigouroux"
+set editor='/usr/local/bin/nvim'
 
 set mail_check=90
 set header_cache = "~/.config/mutt/header_cache/"
-
-set debug_level = 5
-set debug_file = neolog
 
 source ginp.profile
 
