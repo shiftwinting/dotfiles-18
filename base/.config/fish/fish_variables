@@ -8,6 +8,7 @@ SETUVAR __fish_initialized:3100
 SETUVAR _fish_abbr_nf:nvimfzf
 SETUVAR _fish_abbr_py:python3\x2e7
 SETUVAR _fish_abbr_vi:nvim
+SETUVAR _fish_abbr_zf:zathura\x20\x28fd\x20\x22\x2e\x2a\x2epdf\x22\x20\x7c\x20fzf\x29
 SETUVAR fish_color_autosuggestion:BD93F9
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:F8F8F2
