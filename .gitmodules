@@ -64,9 +64,18 @@
 [submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-javacomplete2"]
 	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-javacomplete2
 	url = https://github.com/artur-shaik/vim-javacomplete2.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/opt/nvim-colorizer.lua"]
+	path = neovim/.local/share/nvim/site/pack/vigou/opt/nvim-colorizer.lua
+	url = https://github.com/norcalli/nvim-colorizer.lua.git
 [submodule "base/apps/tabbed"]
 	path = base/apps/tabbed
 	url = https://git.suckless.org/tabbed
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-toml"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-toml
+	url = https://github.com/cespare/vim-toml.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/nvim-luadev"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/nvim-luadev
+	url = https://github.com/bfredl/nvim-luadev.git
 [submodule "base/apps/slock"]
 	path = base/apps/slock
 	url = git@github.com:vigoux/slock.git
