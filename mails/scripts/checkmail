@@ -18,7 +18,7 @@ if lpass status -q; then
 else
 	ACTION=$(dunstify -A 'login,Log In' "Login needed" "You need to log in the LastPass to check mails")
 	if [ "$ACTION" == "login" ]; then
-		lpass login tomvig38@gmail.com 2>&1 > /home/thomas/test
+		lpass login tomvig38@gmail.com 2>&1
 		/home/thomas/scripts/checkmail
 	fi
 fi
