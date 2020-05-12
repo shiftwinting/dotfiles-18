@@ -64,3 +64,9 @@
 [submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-javacomplete2"]
 	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-javacomplete2
 	url = https://github.com/artur-shaik/vim-javacomplete2.git
+[submodule "base/apps/tabbed"]
+	path = base/apps/tabbed
+	url = https://git.suckless.org/tabbed
+[submodule "base/apps/slock"]
+	path = base/apps/slock
+	url = git@github.com:vigoux/slock.git
