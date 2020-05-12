@@ -28,7 +28,7 @@ macro index,pager c "<change-vfolder>?"
 macro index \\ "<vfolder-from-query>"
 macro index - "<modify-labels>-"
 macro index + "<modify-labels>+"
-
+macro compose Y "| pandoc -fmarkdown-blank_before_blockquote --template=$HOME/.config/mutt/email-template.html -Thtml -o /tmp/neomutt-alternative.html<enter><attach-file>/tmp/neomutt-alternative.html<enter><tag-entry><previous-entry><tag-entry><group-alternatives><send-message>"
 set nm_query_type = threads
 set sort=threads
 
@@ -36,11 +36,13 @@ bind index g noop
 bind index gg first-entry
 bind index G last-entry
 set read_inc=1000
-set query_command="~/.config/mutt/addr_query.sh"
-set query_format="%4c %t %-45.45a %-25.25n %?e?(%e)?"
-set record="~/Mail/sent"
-set postponed="~/Mail/postponed"
+set query_command="$HOME/.config/mutt/addr_query.sh"
+set query_format="%4c %t %-70.70a %-25.25n %?e?(%e)?"
+set record="$HOME/Mail/sent"
+set postponed="$HOME/Mail/postponed"
 set sig_on_top=yes
+set fast_reply=yes
+set pipe_decode
 
 # reply-hook '~C tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
 send-hook '~f tomvig38@gmail\.com' 'source ~/.config/mutt/gmail.profile'
