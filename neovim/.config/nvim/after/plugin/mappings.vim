@@ -16,10 +16,13 @@ imap <expr><S-TAB>
 			\ pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 
+imap <expr><S-Tab> pumvisible() ? "\<C-P>" : "\<S-TAB>"
+
 nnoremap ' `
 nnoremap ` '
-nnoremap j gj
-nnoremap k gk
+vnoremap <silent> J :move '>+1<cr>gv=gv
+vnoremap <silent> K :m '<-2<cr>gv=gv
+nnoremap <silent> <Leader><Leader> <C-^>
 
 nnoremap <silent> <Leader><Leader> <C-6>
 

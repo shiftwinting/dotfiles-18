@@ -4,7 +4,7 @@ if !exists('g:loaded_completion')
 	finish
 endif
 
-" let g:completion_auto_change_source = 1
+let g:completion_auto_change_source = 1
 
 let g:completion_chain_complete_list = {
 			\'default' : {
@@ -13,8 +13,8 @@ let g:completion_chain_complete_list = {
 			\	'string' : [{'mode' : 'file'}],
 			\	},
 			\'vim' : [
-			\	{'complete_items': ['snippet']},
-			\	{'mode' : 'cmd'}
+			\	{'mode' : 'cmd'},
+			\	{'complete_items': ['snippet']}
 			\	],
 			\'c' : [
 			\	{'complete_items': ['ts']},

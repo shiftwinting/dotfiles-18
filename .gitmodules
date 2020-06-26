@@ -44,7 +44,7 @@
 	path = base/apps/dmenu
 	url = git@github.com:vigoux/dmenu.git
 [submodule "base/apps/neovim"]
-	path = base/apps/neovim
+	path = neovim/apps/neovim
 	url = https://github.com/neovim/neovim.git
 [submodule "neovim/.local/share/nvim/site/pack/vigou/start/editorconfig-vim"]
 	path = neovim/.local/share/nvim/site/pack/vigou/start/editorconfig-vim

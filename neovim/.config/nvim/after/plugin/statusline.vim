@@ -28,8 +28,9 @@ function! StatusLineActive()
     return l:status
 endfunction
 
+
 function! StatusLineInactive()
-    return "\ \ \ \ \ \ ./%<%.50f%m\ %y%q%w"
+    return "\ \ \ \ \ \ %<%.50f%m\ %y%q%w"
 endfunction
 
 augroup Wins

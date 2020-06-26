@@ -22,7 +22,7 @@ set lazyredraw                                         " Performances ??
 set nofoldenable                                       " "Si tu fold, c'est que c'est pas assez refactor" -- Léo Paquet, 2019
 set spelllang=en,fr
 set spellfile=~/.config/nvim/spell/correct.UTF-8.add
-set textwidth=125
+set textwidth=100
 set colorcolumn=+0
 set signcolumn=yes:2                                   " Pour eviter que ça clignotte à gauche
 set scrolloff=5

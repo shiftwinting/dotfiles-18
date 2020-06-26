@@ -36,6 +36,7 @@ nvim_lsp.rust_analyzer.setup{
 	capabilities = lsp_status.capabilities
 }
 nvim_lsp.ghcide.setup{}
+nvim_lsp.rust_analyzer.setup({})
 EOF
 " }
 
