@@ -1,4 +1,4 @@
-" Last Change: 2020 avril 30
+" Last Change: 2020 Jun 17
 
 if !exists('g:loaded_completion')
 	finish
@@ -8,12 +8,9 @@ endif
 
 let g:completion_chain_complete_list = {
 			\'default' : {
-			\	'default' : [
-			\		{'complete_items' : ['lsp', 'snippet']},
-			\		{'mode' : 'file'}
-			\	],
+			\	'default' : [{'complete_items' : ['lsp', 'snippet']}],
 			\	'comment' : [],
-			\	'string' : []
+			\	'string' : [{'mode' : 'file'}],
 			\	},
 			\'vim' : [
 			\	{'complete_items': ['snippet']},
@@ -34,6 +31,8 @@ let g:completion_chain_complete_list = {
 			\'mail' : [],
 			\'vimwiki' : []
 			\}
+
+let g:completion_enable_snippet = 'vim-vsnip'
 
 let g:complete_ts_highlight_at_point = 1
 

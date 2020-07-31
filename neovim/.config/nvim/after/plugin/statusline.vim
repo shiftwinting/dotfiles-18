@@ -1,4 +1,4 @@
-" Last Change: 2020 mar 07
+" Last Change: 2020 Jul 09
 
 function! GitFileSummary() abort
     if ! exists('b:gitgutter')
@@ -9,10 +9,19 @@ function! GitFileSummary() abort
     endif
 endfunction
 
+" Statusline
+function! LspStatus() abort
+	if luaeval('#vim.lsp.buf_get_clients() > 0')
+		return luaeval("require('lsp-status').status()")
+	endif
+	return ''
+endfunction
+
+
 function! StatusLineActive()
-    let l:status = "%1*%-5.{mode(5)}%*\ "
+    let l:status = "%1*%-6.{mode(6)}%*\ "
     let l:status .= "%#VertSplit#%2*%<%.50f%3*%m\ "
-    let l:status .= "%4*%y%q%w%*%#VertSplit#%12.{GitFileSummary()}%="
+    let l:status .= "%4*%y%q%w%{ObsessionStatus()}%*%#VertSplit#%12.{GitFileSummary()}\ %{LspStatus()}%="
     let l:status .= "%16.(%10.(%5*%l%6*/%LL%),\ %-5.(%5*%c%6*%V%)%)"
     let l:status .= "\ %10.P"
 

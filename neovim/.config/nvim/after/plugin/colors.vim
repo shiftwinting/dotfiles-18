@@ -1,4 +1,4 @@
-" Last Change: 2020 avril 26
+" Last Change: 2020 Jun 18
 color dracula
 " Hardcoded, du coup c'est moche, trouver un autre moyen
 " C'est juste le fg de CursorLineNr et le bg de Vertsplit
@@ -15,3 +15,7 @@ highlight link StatusLine Pmenu
 highlight clear CursorLine
 
 hi Normal guibg=NONE ctermbg=NONE
+
+highlight link GitGutterAdd DiffAdd
+highlight link GitGutterChange DiffChange
+highlight link GitGutterDelete DiffDelete

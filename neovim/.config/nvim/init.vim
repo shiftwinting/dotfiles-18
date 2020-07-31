@@ -1,13 +1,13 @@
-" Last Change: 2020 avril 30
+" Last Change: 2020 Jul 24
 " Plugin manager
 let g:python_host_prog='/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = '/usr/bin/python3'
 
 let OS=substitute(system('uname -s'),"\n","","")
 if (OS == "Darwin")
     set rtp+=/usr/local/opt/fzf
 elseif ( OS == 'Linux' )
-    source /usr/share/vim/vimfiles/plugin/fzf.vim
+    set rtp+=/usr/share/vim/vimfiles/plugin
 endif
 
 " Options {{{
@@ -24,20 +24,23 @@ set spelllang=en,fr
 set spellfile=~/.config/nvim/spell/correct.UTF-8.add
 set textwidth=125
 set colorcolumn=+0
-set signcolumn=yes                                     " Pour eviter que ça clignotte à gauche
+set signcolumn=yes:2                                   " Pour eviter que ça clignotte à gauche
 set scrolloff=5
 set winblend=10 " Des fenetres flottantes transparentes, tro stylé
 set updatetime=500
 set nowrap
 set mouse=n
+set previewheight=5
 
 set inccommand=nosplit                                 " preview des recherches © Ensimag bb
 set completeopt=preview,menuone,noinsert                           " j'ai pas encore tout compris
-set list listchars=tab:\|-,trail:•,nbsp:!,conceal::     " Afficher les caractères moches
+set list listchars=tab:\|-,trail:•,nbsp:!,conceal::,precedes:<,extends:>    " Afficher les caractères moches
 set tags=.tags;/                                       " Chercher les tags dans les dossiers superieurs
 set undofile                                           " Undo persistants
 set grepprg="rg --vimgrep"                             " plus vite que grep
 set shortmess+=c
+
+set sessionoptions-=buffers
 
 " For conceal markers.
 set conceallevel=1 concealcursor=niv

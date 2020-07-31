@@ -39,7 +39,6 @@ command! -nargs=0 CHistory
             \ call fzf#vim#command_history()
 
 nnoremap z= :call FzfSpell()<CR>
-nnoremap <silent> <Leader><Leader> :Rg<CR>
 nnoremap <silent> <Leader>e :Files<CR>
 nnoremap <silent> <leader>h :Helptags<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
@@ -47,3 +46,4 @@ nnoremap <silent> <Leader>t :Tags<CR>
 nnoremap <silent> <Leader>c :Commits<CR>
 nnoremap <silent> <Leader>oc :FZF ~/.config/<CR>
 nnoremap <silent> <leader>q :CHistory<CR>
+nnoremap <silent> <Leader>r :Rg<CR>

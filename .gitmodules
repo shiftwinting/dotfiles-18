@@ -62,7 +62,7 @@
 	path = neovim/.local/share/nvim/site/pack/vigou/start/neoformat
 	url = https://github.com/sbdchd/neoformat.git
 [submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-javacomplete2"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-javacomplete2
+	path = neovim/.local/share/nvim/site/pack/vigou/opt/vim-javacomplete2
 	url = https://github.com/artur-shaik/vim-javacomplete2.git
 [submodule "neovim/.local/share/nvim/site/pack/vigou/opt/nvim-colorizer.lua"]
 	path = neovim/.local/share/nvim/site/pack/vigou/opt/nvim-colorizer.lua
@@ -79,3 +79,9 @@
 [submodule "base/apps/tabbed"]
 	path = base/apps/tabbed
 	url = git@github.com:vigoux/tabbed.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/lsp-status.nvim"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/lsp-status.nvim
+	url = https://github.com/nvim-lua/lsp-status.nvim.git
+[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-obsession"]
+	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-obsession
+	url = https://github.com/tpope/vim-obsession.git
