@@ -1,4 +1,4 @@
-" Last Change: 2020 Jul 24
+" Last Change: 2020 Aug 27
 " Plugin manager
 let g:python_host_prog='/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
@@ -9,6 +9,9 @@ if (OS == "Darwin")
 elseif ( OS == 'Linux' )
     set rtp+=/usr/share/vim/vimfiles/plugin
 endif
+
+packadd packer.nvim
+lua require"plugins"
 
 " Options {{{
 
@@ -61,4 +64,4 @@ let mapleader = "\<Space>"
 
 " }}}
 
-packloadall
+language time POSIX

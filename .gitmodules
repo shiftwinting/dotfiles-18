@@ -1,42 +1,3 @@
-[submodule "neovim/.local/share/nvim/site/pack/vigou/LanguageTool.nvim"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/LanguageTool.nvim
-	url = git@github.com:vigoux/LanguageTool.nvim.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/dracula
-	url = https://github.com/dracula/vim.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/nvim-lsp"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/nvim-lsp
-	url = https://github.com/neovim/nvim-lsp.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/completion-nvim"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/completion-nvim
-	url = https://github.com/haorenW1025/completion-nvim.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/fzf.vim"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/completion-treesitter"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/completion-treesitter
-	url = git@github.com:vigoux/completion-treesitter.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/neosnippet.vim"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/neosnippet.vim
-	url = https://github.com/Shougo/neosnippet.vim.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/neosnippet-snippets"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/neosnippet-snippets
-	url = https://github.com/Shougo/neosnippet-snippets.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/auto-pairs"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-commentary"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-commentary
-	url = https://github.com/tpope/vim-commentary.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-dispatch"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-dispatch
-	url = https://github.com/tpope/vim-dispatch.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-surround"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/templar.nvim"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/templar.nvim
-	url = git@github.com:vigoux/templar.nvim.git
 [submodule "base/apps/st"]
 	path = base/apps/st
 	url = git@github.com:vigoux/st.git
@@ -46,42 +7,12 @@
 [submodule "base/apps/neovim"]
 	path = neovim/apps/neovim
 	url = https://github.com/neovim/neovim.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/editorconfig-vim"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/nvim-treesitter"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/nvim-treesitter
-	url = git@github.com:vigoux/nvim-treesitter.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vimwiki"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-fugitive"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/neoformat"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/neoformat
-	url = https://github.com/sbdchd/neoformat.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-javacomplete2"]
-	path = neovim/.local/share/nvim/site/pack/vigou/opt/vim-javacomplete2
-	url = https://github.com/artur-shaik/vim-javacomplete2.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/opt/nvim-colorizer.lua"]
-	path = neovim/.local/share/nvim/site/pack/vigou/opt/nvim-colorizer.lua
-	url = https://github.com/norcalli/nvim-colorizer.lua.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-toml"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-toml
-	url = https://github.com/cespare/vim-toml.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/nvim-luadev"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/nvim-luadev
-	url = https://github.com/bfredl/nvim-luadev.git
 [submodule "base/apps/slock"]
 	path = base/apps/slock
 	url = git@github.com:vigoux/slock.git
 [submodule "base/apps/tabbed"]
 	path = base/apps/tabbed
 	url = git@github.com:vigoux/tabbed.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/lsp-status.nvim"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/lsp-status.nvim
-	url = https://github.com/nvim-lua/lsp-status.nvim.git
-[submodule "neovim/.local/share/nvim/site/pack/vigou/start/vim-obsession"]
-	path = neovim/.local/share/nvim/site/pack/vigou/start/vim-obsession
-	url = https://github.com/tpope/vim-obsession.git
+[submodule "neovim/.local/share/nvim/site/pack/packer/opt/packer.nvim"]
+	path = neovim/.local/share/nvim/site/pack/packer/opt/packer.nvim
+	url = https://github.com/wbthomason/packer.nvim.git

@@ -1,0 +1,4 @@
+start/
+opt/*
+
+!opt/packer.nvim/

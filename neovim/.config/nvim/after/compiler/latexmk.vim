@@ -4,5 +4,32 @@ if exists("current_compiler")
 endif
 let current_compiler = "latexmk"
 
-CompilerSet makeprg=latexmk\ -pdf\ %:t:r
-CompilerSet errorformat=%f:%l:\ %m
+CompilerSet makeprg=latexmk\ -pdf\ -shell-escape\ -pvc\ %:t:r
+CompilerSet errorformat=%E!\ LaTeX\ %trror:\ %m,
+	\%E!\ %m,
+	\%+WLaTeX\ %.%#Warning:\ %.%#line\ %l%.%#,
+	\%+W%.%#\ at\ lines\ %l--%*\\d,
+	\%WLaTeX\ %.%#Warning:\ %m,
+	\%Cl.%l\ %m,
+	\%+C\ \ %m.,
+	\%+C%.%#-%.%#,
+	\%+C%.%#[]%.%#,
+	\%+C[]%.%#,
+	\%+C%.%#%[{}\\]%.%#,
+	\%+C<%.%#>%.%#,
+	\%C\ \ %m,
+	\%-GSee\ the\ LaTeX%m,
+	\%-GType\ \ H\ <return>%m,
+	\%-G\ ...%.%#,
+	\%-G%.%#\ (C)\ %.%#,
+	\%-G(see\ the\ transcript%.%#),
+	\%-G\\s%#,
+	\%+O(%*[^()])%r,
+	\%+O%*[^()](%*[^()])%r,
+	\%+P(%f%r,
+	\%+P\ %\\=(%f%r,
+	\%+P%*[^()](%f%r,
+	\%+P[%\\d%[^()]%#(%f%r,
+	\%+Q)%r,
+	\%+Q%*[^()])%r,
+	\%+Q[%\\d%*[^()])%r

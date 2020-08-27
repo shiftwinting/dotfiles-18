@@ -1,4 +1,4 @@
-" Last Change: 2020 août 06
+" Last Change: 2020 Aug 27
 vnoremap <silent> < <gv
 vnoremap <silent> > >gv
 
@@ -20,11 +20,8 @@ imap <expr><S-Tab> pumvisible() ? "\<C-P>" : "\<S-TAB>"
 
 nnoremap ' `
 nnoremap ` '
-vnoremap <silent> J :move '>+1<cr>gv=gv
-vnoremap <silent> K :m '<-2<cr>gv=gv
+nnoremap <silent> [p ]p
 nnoremap <silent> <Leader><Leader> <C-^>
-
-nnoremap <silent> <Leader><Leader> <C-6>
 
 " Got from https://prettier.io/docs/en/vim.html
 nnoremap gp :silent %!prettier --stdin-filepath % --trailing-comma all --single-quote<CR>

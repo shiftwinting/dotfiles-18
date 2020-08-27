@@ -1,3 +1,4 @@
+" Last Change: 2020 Aug 27
 if !exists('g:loaded_fzf')
     finish
 endif
@@ -43,7 +44,7 @@ nnoremap <silent> <Leader>e :Files<CR>
 nnoremap <silent> <leader>h :Helptags<CR>
 nnoremap <silent> <leader>b :Buffers<CR>
 nnoremap <silent> <Leader>t :Tags<CR>
-nnoremap <silent> <Leader>c :Commits<CR>
+nnoremap <silent> <Leader>gc :Commits<CR>
 nnoremap <silent> <Leader>oc :FZF ~/.config/<CR>
 nnoremap <silent> <leader>q :CHistory<CR>
 nnoremap <silent> <Leader>r :Rg<CR>

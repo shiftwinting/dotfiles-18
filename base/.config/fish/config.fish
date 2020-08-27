@@ -20,7 +20,6 @@ abbr vi nvim
 abbr py python3.7
 abbr nf nvimfzf
 abbr zf 'zathura (fd ".*.pdf" | fzf)'
-abbr lz lazygit
 
 alias pip pip3.7
 alias python python3.7
