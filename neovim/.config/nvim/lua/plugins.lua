@@ -8,7 +8,7 @@ return require"packer".startup(function(use)
 
   -- Running things
   use {'tpope/vim-dispatch', opt = true, keys = {'m<CR>', '`<CR>'}, cmd = {'Make', 'Dispatch'}}
-  use '~/src/plugins/sniprun'
+  use {'michaelb/sniprun', opt = true, cmd = { 'SnipRun' }, run = './install.sh' }
 
   -- tpope <3
   use 'tpope/vim-obsession'
