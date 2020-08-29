@@ -1,4 +1,4 @@
-" Last Change: 2020 Aug 27
+" Last Change: 2020 Aug 29
 vnoremap <silent> < <gv
 vnoremap <silent> > >gv
 
@@ -10,8 +10,7 @@ nnoremap <silent> yQ :cclose<CR>
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
 imap <expr><TAB>
-			\ pumvisible() ? "\<C-n>" : 
-			\ vsnip#available(1)  ? '<Plug>(vsnip-jump-next)' : "\<TAB>"
+			\ pumvisible() ? "\<C-n>" : "\<TAB>"
 imap <expr><S-TAB>
 			\ pumvisible() ? "\<C-p>" : "\<S-TAB>"
 

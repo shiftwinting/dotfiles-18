@@ -21,6 +21,7 @@ return require"packer".startup(function(use)
     requires = {
         {'hrsh7th/vim-vsnip'},
         {'hrsh7th/vim-vsnip-integ', opt = true},
+        {'norcalli/snippets.nvim'},
         'neovim/nvim-lsp'
     }
   }

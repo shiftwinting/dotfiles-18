@@ -1,4 +1,4 @@
-" Last Change: 2020 août 07
+" Last Change: 2020 Aug 29
 
 if !exists('g:loaded_completion')
 	finish
@@ -20,8 +20,7 @@ let g:completion_chain_complete_list = {
 			\	{'complete_items': ['lsp', 'snippet']},
 			\	],
 			\'lua' : [
-			\	{'complete_items': ['ts']},
-			\	{'complete_items': ['snippet']}
+			\	{'complete_items': ['ts', 'snippet']}
 			\	],
 			\'java' : [
 			\	{ 'mode' : 'omni', 'triggered_only': ['.', '::']},
