@@ -1,4 +1,4 @@
-" Last Change: 2020 Aug 27
+" Last Change: 2020 Aug 28
 
 if !exists('g:loaded_nvim_treesitter')
 	finish
@@ -41,6 +41,8 @@ require'nvim-treesitter.configs'.setup {
         }
       }
     },
+	playground = { enable = true },
+	fold = { enable = true },
     ensure_installed = {'rust', 'c', 'lua', 'query'} -- one of 'all', 'language', or a list of languages
 }
 EOF

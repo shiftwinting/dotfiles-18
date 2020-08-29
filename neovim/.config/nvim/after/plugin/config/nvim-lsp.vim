@@ -1,4 +1,4 @@
-" Last Change: 2020 Aug 13
+" Last Change: 2020 Aug 27
 " Utility to store lsp/completion config
 " I use omnifunc with default mappings (like <C-X><C-O>) but with <Tab> and <S-Tab> to choose
 set omnifunc=v:lua.vim.lsp.omnifunc
@@ -43,7 +43,7 @@ nvim_lsp.ghcide.setup{}
 EOF
 " }
 
-nnoremap <silent> <Leader>d    <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> <Leader>d    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
 nnoremap <silent> <C-S-K> <cmd>lua vim.lsp.buf.signature_help()<CR>

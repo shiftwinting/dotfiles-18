@@ -1,4 +1,4 @@
-" Last Change: 2020 Jun 17
+" Last Change: 2020 août 07
 
 if !exists('g:loaded_completion')
 	finish
@@ -17,7 +17,7 @@ let g:completion_chain_complete_list = {
 			\	{'complete_items': ['snippet']}
 			\	],
 			\'c' : [
-			\	{'complete_items': ['ts']},
+			\	{'complete_items': ['lsp', 'snippet']},
 			\	],
 			\'lua' : [
 			\	{'complete_items': ['ts']},

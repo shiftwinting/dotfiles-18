@@ -6,8 +6,11 @@ return require"packer".startup(function(use)
   use 'junegunn/fzf.vim'
   use 'editorconfig/editorconfig-vim'
 
-  -- tpope <3
+  -- Running things
   use {'tpope/vim-dispatch', opt = true, keys = {'m<CR>', '`<CR>'}, cmd = {'Make', 'Dispatch'}}
+  use '~/src/plugins/sniprun'
+
+  -- tpope <3
   use 'tpope/vim-obsession'
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
@@ -16,7 +19,7 @@ return require"packer".startup(function(use)
   use {
     'haorenW1025/completion-nvim',
     requires = {
-        {'hrsh7th/vim-vsnip', opt = true},
+        {'hrsh7th/vim-vsnip'},
         {'hrsh7th/vim-vsnip-integ', opt = true},
         'neovim/nvim-lsp'
     }
