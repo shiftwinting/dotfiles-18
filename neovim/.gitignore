@@ -1,2 +1,6 @@
+.config/nvim/parser/
+.config/nvim/spell/
+.config/nvim/plugin/packer_compiled.vim
 .netrwhist
-lsp.log
+*.log
+*.shada
