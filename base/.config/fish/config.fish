@@ -2,7 +2,7 @@ set -x EDITOR /usr/local/bin/nvim
 set -x FZF_DEFAULT_OPTS "--preview=\"bat --color=always --style numbers,grid,changes {}\""
 set -x FZF_DEFAULT_COMMAND "fd --color=never"
 
-set -x PATH $PATH $HOME/.luarocks/bin $HOME/scripts $HOME/.local/bin
+set -x PATH $PATH $HOME/.luarocks/bin $HOME/scripts $HOME/.local/bin $HOME/go/bin/
 
 function nvimfzf
     nvim +"Files! $argv[1]"
@@ -10,10 +10,6 @@ end
 
 function man
 	nvim +"Man $argv[1]" +only 
-end
-
-function tig
-    nvim +G +only
 end
 
 abbr vi nvim
