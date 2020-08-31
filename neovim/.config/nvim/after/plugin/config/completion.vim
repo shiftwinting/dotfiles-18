@@ -1,10 +1,10 @@
-" Last Change: 2020 Aug 29
+" Last Change: 2020 Aug 31
 
 if !exists('g:loaded_completion')
 	finish
 endif
 
-let g:completion_auto_change_source = 1
+let g:completion_auto_change_source = 0
 
 let g:completion_chain_complete_list = {
 			\'default' : {
@@ -14,7 +14,6 @@ let g:completion_chain_complete_list = {
 			\	},
 			\'vim' : [
 			\	{'mode' : 'cmd'},
-			\	{'complete_items': ['snippet']}
 			\	],
 			\'c' : [
 			\	{'complete_items': ['lsp', 'snippet']},
@@ -33,7 +32,7 @@ let g:completion_chain_complete_list = {
 
 let g:completion_enable_snippet = 'vim-vsnip'
 
-let g:complete_ts_highlight_at_point = 1
+let g:vsnip_snippet_dir = expand("$HOME") . '/.config/nvim/snippets/'
 
 " Use completion-nvim in every buffer
 autocmd BufEnter * lua require'completion'.on_attach()

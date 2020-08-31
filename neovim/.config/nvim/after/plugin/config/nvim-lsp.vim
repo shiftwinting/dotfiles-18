@@ -1,4 +1,4 @@
-" Last Change: 2020 Aug 29
+" Last Change: 2020 Aug 31
 " Utility to store lsp/completion config
 
 lua require'lsp-config'

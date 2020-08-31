@@ -17,12 +17,11 @@ return require"packer".startup(function(use)
 
   -- LSP related
   use {
-    'haorenW1025/completion-nvim',
+    'nvim-lua/completion-nvim',
     requires = {
-        {'hrsh7th/vim-vsnip'},
-        {'hrsh7th/vim-vsnip-integ', opt = true},
-        {'norcalli/snippets.nvim'},
-        'neovim/nvim-lsp'
+        'hrsh7th/vim-vsnip',
+        'hrsh7th/vim-vsnip-integ',
+        'neovim/nvim-lspconfig'
     }
   }
   use 'nvim-lua/lsp-status.nvim'

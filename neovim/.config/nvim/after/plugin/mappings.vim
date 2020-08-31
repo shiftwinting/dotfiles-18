@@ -1,4 +1,4 @@
-" Last Change: 2020 Aug 29
+" Last Change: 2020 Aug 30
 vnoremap <silent> < <gv
 vnoremap <silent> > >gv
 
@@ -9,11 +9,11 @@ nnoremap <silent> yQ :cclose<CR>
 
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 
-imap <expr><TAB>
-			\ pumvisible() ? "\<C-n>" : "\<TAB>"
-imap <expr><S-TAB>
-			\ pumvisible() ? "\<C-p>" : "\<S-TAB>"
+imap <expr><TAB> v:lua.tab_complete()
+smap <expr><TAB> v:lua.tab_complete()
 
+imap <expr><S-TAB> v:lua.s_tab_complete()
+smap <expr><S-TAB> v:lua.s_tab_complete()
 
 imap <expr><S-Tab> pumvisible() ? "\<C-P>" : "\<S-TAB>"
 
