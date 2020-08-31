@@ -1,0 +1,32 @@
+{
+	"For" : {
+		"prefix" : "for",
+		"body" : [
+			"for $1=$2,$3 do",
+			"\t$4",
+			"end",
+			"$0"
+		],
+		"description" : ""
+	},
+	"ForIn" : {
+		"prefix" : "forin",
+		"body" : [
+			"for $1 in $2 do",
+			"\t$3",
+			"end",
+			"$0"
+		],
+		"description" : ""
+	},
+	"Iterate" : {
+		"prefix" : "iter",
+		"body" : [
+			"for _, $1 in ipairs($2) do",
+			"\t$3",
+			"end",
+			"$0"
+		],
+		"description" : ""
+	}
+}

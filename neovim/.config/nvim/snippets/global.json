@@ -1,0 +1,9 @@
+{
+    "TODO" : {
+        "prefix" : "todo",
+        "body" : [
+            "TODO(vigoux): "
+        ],
+        "description" : "A todo placeholder"
+    }
+}

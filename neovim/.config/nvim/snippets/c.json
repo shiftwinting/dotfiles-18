@@ -1,0 +1,24 @@
+{
+	"Switch" : {
+		"prefix" : "switch",
+		"body" : [
+			"switch ($1) {",
+			"\t$2",
+			"\tdefault:",
+			"\t\t$3",
+			"}",
+			"$0"
+		],
+		"description" : "A switch statement."
+	},
+	"Case" : {
+		"prefix" : "case",
+		"body" : [
+			"case $1:",
+			"\t$2",
+			"\tbreak",
+			"$0"
+		],
+		"description" : "A case statement."
+	}
+}
