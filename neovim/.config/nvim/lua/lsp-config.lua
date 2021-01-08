@@ -1,38 +1,43 @@
-local lsp_status = require('lsp-status')
-lsp_status.register_progress()
+require'snippets-config'
 
-lsp_status.config{
-	indicator_errors = 'E',
-	indicator_warnings = 'W',
-	indicator_info = 'I',
-	indicator_hint = 'H',
-	indicator_ok = '',
-	status_symbol = '',
-}
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-vim.lsp.util.buf_diagnostics_virtual_text = function(_, _) return end
+function handle_publish_diags(err, method, result, client_id, bufnr, config)
+  vim.lsp.diagnostic.on_publish_diagnostics(err, method, result, client_id, bufnr, {
+    underline = true,
+    virtual_text = true,
+    signs = true,
+    update_in_insert = true,
+  })
+
+  vim.lsp.diagnostic.set_loclist {
+    open_loclist = false,
+    client_id = client_id,
+    severity_limit = "Warning",
+  }
+
+  local loclist = vim.fn.getloclist(vim.fn.bufwinid(bufnr or 0))
+end
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = handle_publish_diags
 vim.cmd[[packadd nvim-lsp]]
 
-local nvim_lsp = require'nvim_lsp'
+local nvim_lsp = require'lspconfig'
 local protocol = require'vim.lsp.protocol'
 
 -- Not sure this is useful
 nvim_lsp.util.default_config = vim.tbl_extend(
-	"force",
-	nvim_lsp.util.default_config,
-	{ log_level = vim.lsp.protocol.MessageType.Info }
+  "force",
+  nvim_lsp.util.default_config,
+  { log_level = vim.lsp.protocol.MessageType.Info }
 )
 
-nvim_lsp.ccls.setup{
-	on_attach = lsp_status.on_attach,
-	capabilities = lsp_status.capabilities
-}
-
-nvim_lsp.rust_analyzer.setup{
-	on_attach = lsp_status.on_attach,
-	capabilities = lsp_status.capabilities
-}
-nvim_lsp.ghcide.setup{}
+nvim_lsp.ccls.setup{ capabilities = capabilities }
+nvim_lsp.als.setup{ capabilities = capabilities }
+nvim_lsp.rust_analyzer.setup{ capabilities = capabilities }
+nvim_lsp.ghcide.setup{ capabilities = capabilities }
+nvim_lsp.tsserver.setup{ capabilities = capabilities }
 
 -- texlab
 local function texlab_attach()
@@ -91,39 +96,10 @@ local function texlab_attach()
     'part';
     'collect';
   }
-  lsp_status.on_attach()
 end
 
 nvim_lsp.texlab.setup{
   cmd = {vim.fn.expand("$HOME") ..'/.cargo/bin/texlab'},
   on_attach = texlab_attach,
-  capabilities = lsp_status.capabilities
 }
 
--- Completion and so on
-
-local rt = function(codes)
-	return vim.api.nvim_replace_termcodes(codes, true, true, true)
-end
-
-local call = vim.api.nvim_call_function
-
-function tab_complete()
-    if vim.fn.pumvisible() == 1 then
-        return rt('<C-N>')
-    elseif call('vsnip#available', {1}) == 1 then
-        return rt('<Plug>(vsnip-expand-or-jump)')
-    else
-        return rt('<Tab>')
-    end
-end
-
-function s_tab_complete()
-    if vim.fn.pumvisible() == 1 then
-        return rt('<C-P>')
-    elseif call('vsnip#jumpable', {-1}) == 1 then
-        return rt('<Plug>(vsnip-jump-prev)')
-    else
-        return rt('<S-Tab>')
-    end
-end

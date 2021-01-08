@@ -1,10 +1,10 @@
-" Last Change: 2020 Aug 31
+" Last Change: 2020 Dec 14
 
 if !exists('g:loaded_completion')
 	finish
 endif
 
-let g:completion_auto_change_source = 0
+let g:completion_auto_change_source = 1
 
 let g:completion_chain_complete_list = {
 			\'default' : {
@@ -21,13 +21,20 @@ let g:completion_chain_complete_list = {
 			\'lua' : [
 			\	{'complete_items': ['ts', 'snippet']}
 			\	],
+			\'mem' : [
+			\	{'complete_items': ['ts', 'snippet']}
+			\	],
 			\'java' : [
 			\	{ 'mode' : 'omni', 'triggered_only': ['.', '::']},
 			\	{ 'mode' : 'tags' },
 			\	],
 			\'groff' : [],
 			\'mail' : [],
-			\'vimwiki' : []
+			\'vimwiki' : [],
+      \'markdown': [
+      \ { 'mode' : 'file' },
+      \ { 'complete_items' : [ 'snippet' ] }
+      \]
 			\}
 
 let g:completion_enable_snippet = 'vim-vsnip'

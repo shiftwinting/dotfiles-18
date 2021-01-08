@@ -1,0 +1,15 @@
+{
+  "RSSEntry" : {
+    "prefix" : "item",
+    "body" : [
+      "<item>",
+      "\t<title>${1:title}</title>",
+      "\t<description>${2:desc}</description>",
+      "\t<link>gopher://vigoux.giize.com/0/phlog/${3:file_path}</link>",
+      "\t<guid isPermaLink=\"true\">gopher://vigoux.giize.com/0/phlog/$3</guid>",
+      "\t<pubDate>${VIM:strftime('%c %Z')}</pubDate>",
+      "</item>"
+    ],
+    "description" : "RSS XML entry"
+  }
+}

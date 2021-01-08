@@ -1,6 +1,15 @@
+local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+parser_config.vim = {
+  install_info = {
+    url = "~/projects/tree-sitter-viml", -- local path or git repo
+    files = {"src/parser.c", "src/scanner.c"}
+  },
+}
+
 require'nvim-treesitter.configs'.setup {
     highlight = {
         enable = true,                    -- false will disable the whole extension
+        -- use_languagetree = true,
         disable = {},        -- list of language that will be disabled
     },
     incremental_selection = {
@@ -13,6 +22,7 @@ require'nvim-treesitter.configs'.setup {
             node_decremental = "grm",       -- decrement to the previous node
         }
     },
+    indent = { enable = false },
     refactor = {
         highlight_definitions = {
             enable = true
@@ -35,5 +45,5 @@ require'nvim-treesitter.configs'.setup {
         }
     },
     playground = { enable = true },
-    ensure_installed = {'rust', 'c', 'lua', 'query'} -- one of 'all', 'language', or a list of languages
+    ensure_installed = {'rust', 'c', 'lua', 'query', 'fennel'} -- one of 'all', 'language', or a list of languages
 }

@@ -1,13 +1,15 @@
-" Last Change: 2020 Aug 28
-" Plugin manager
-let g:python_host_prog='/bin/python'
-let g:python3_host_prog = '/usr/bin/python3'
+" Last Change: 2021 Jan 07
 
 let OS=substitute(system('uname -s'),"\n","","")
 if (OS == "Darwin")
-    set rtp+=/usr/local/opt/fzf
+  let g:python_host_prog='/bin/python'
+  let g:python3_host_prog = '/usr/bin/python3'
+  set rtp+=/usr/local/opt/fzf
 elseif ( OS == 'Linux' )
-    set rtp+=/usr/share/vim/vimfiles/plugin
+  let g:python_host_prog='/bin/python'
+  let g:python3_host_prog = '/bin/python3'
+  set rtp+=/usr/share/vim/vimfiles/plugin
+  source /usr/share/vim/vimfiles/plugin/fzf.vim
 endif
 
 " I always need it
@@ -34,8 +36,9 @@ set scrolloff=5
 set winblend=10 " Des fenetres flottantes transparentes, tro stylé
 set updatetime=500
 set nowrap
+set nocursorline
 set mouse=n
-set previewheight=5
+set previewheight=10
 
 set inccommand=nosplit                                 " preview des recherches © Ensimag bb
 set completeopt=preview,menuone,noinsert                           " j'ai pas encore tout compris
@@ -55,15 +58,20 @@ let g:netrw_liststyle=3
 let g:netrw_list_hide = netrw_gitignore#Hide() . ',\(^\|\s\s\)\zs\.\S\+'
 
 " tabs
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set noexpandtab
-
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
 
 " Leader
 let mapleader = "\<Space>"
+let maplocalleader = "&"
 
 " }}}
+
+au TextYankPost * silent! lua vim.highlight.on_yank {on_visual=false, higroup="Visual"}
+
+lua require'colorizer'.setup()
+lua require'mappings'
 
 language time POSIX

@@ -1,0 +1,29 @@
+{
+	"Slide" : {
+		"prefix" : "slide",
+		"body" : [
+			"---",
+			"",
+			"# ${1:Title}",
+			"",
+			"${2:body}",
+			"",
+			"???",
+			"",
+			"${3:notes}"
+		],
+		"description" : "A new pres.nvim slide"
+	},
+  "Header" : {
+    "prefix" : "header",
+    "body" : [
+      "---",
+      "author: Thomas Vigouroux",
+      "title: ${1:Title}",
+      "toc: false",
+      "",
+      "---"
+    ],
+    "description" : "A Pandoc yaml header"
+  }
+}

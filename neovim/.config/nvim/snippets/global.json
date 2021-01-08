@@ -2,8 +2,22 @@
     "TODO" : {
         "prefix" : "todo",
         "body" : [
-            "TODO(vigoux): "
+            "TODO(vigoux): ${0:content}"
         ],
         "description" : "A todo placeholder"
-    }
+    },
+	"FIXME" : {
+		"prefix" : "fixme",
+		"body" : [
+			"FIXME(vigoux): ${0:content}"
+		],
+		"description" : "A fixme code tag"
+	},
+	"HACK" : {
+		"prefix" : "hack",
+		"body" : [
+			"HACK(vigoux): ${0:content}"
+		],
+		"description" : "A hack code tag"
+	}
 }

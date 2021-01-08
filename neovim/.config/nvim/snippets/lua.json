@@ -2,7 +2,7 @@
 	"For" : {
 		"prefix" : "for",
 		"body" : [
-			"for $1=$2,$3 do",
+			"for ${1:i}=${2:start},${3:stop} do",
 			"\t$4",
 			"end",
 			"$0"
@@ -12,7 +12,7 @@
 	"ForIn" : {
 		"prefix" : "forin",
 		"body" : [
-			"for $1 in $2 do",
+			"for ${1:var} in ${2:iter} do",
 			"\t$3",
 			"end",
 			"$0"
@@ -22,11 +22,27 @@
 	"Iterate" : {
 		"prefix" : "iter",
 		"body" : [
-			"for _, $1 in ipairs($2) do",
+			"for _, ${1:var} in ipairs(${2:table}) do",
 			"\t$3",
 			"end",
 			"$0"
 		],
 		"description" : ""
+	},
+	"LocalRequire" : {
+		"prefix" : "req",
+		"body" : [
+			"local $1 = require'$2'"
+		],
+		"description" : "Local require"
+	},
+	"Test" : {
+		"prefix" : "test",
+		"body" : [
+			"it(\"$1\", function()",
+			"\t$0",
+			"end)"
+		],
+		"description" : "A busted test case"
 	}
 }

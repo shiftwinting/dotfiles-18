@@ -1,0 +1,32 @@
+{
+	"GlossaryEntry" : {
+		"prefix" : "gloss",
+		"body" : [
+			"\\newglossaryentry{$1}{",
+			"\tname={$2},",
+			"\tdescription={$3}",
+			"}"
+		],
+		"description" : "A glossary entry."
+	},
+	"section" : {
+		"prefix" : "section",
+		"body" : [
+			"% $1 %(",
+			"\\section{$1}",
+			"$0",
+			"%)"
+		],
+		"description" : "A section with folding"
+	},
+  "Frame" : {
+    "prefix" : "frame",
+    "body" : [
+      "\\begin{frame}",
+      "\t\\frametitle{$1}",
+      "\t$0",
+      "\\end{frame}"
+    ],
+    "description" : "A beamer frame"
+  }
+}

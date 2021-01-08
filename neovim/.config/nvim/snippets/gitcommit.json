@@ -1,0 +1,9 @@
+{
+    "Co Author" : {
+        "prefix" : "coauth",
+        "body" : [
+            "Co-authored-by: ${1:name} <${2:email}>"
+        ],
+        "description" : "A co-author on github."
+    }
+}

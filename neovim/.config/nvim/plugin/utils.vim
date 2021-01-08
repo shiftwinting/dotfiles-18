@@ -1,3 +1,4 @@
+" Last Change: 2020 Nov 22
 function! IsRealFile() abort
     return bufname("%") !=? ""
 endfunction
@@ -14,3 +15,12 @@ endfunction
 function! SetAsTitle(type) "{{{
     execute 'normal yypVr' . a:type
 endfunction "}}}
+
+nmap <leader>sp :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
